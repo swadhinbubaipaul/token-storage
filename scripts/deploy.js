@@ -14,8 +14,8 @@ async function main() {
 
 	console.log(`TestToken contract deployed to ${testToken.address}`);
 
-	const TokenStorage = await hre.ethers.getContractFactory("Lock");
-	const tokenStorage = await TokenStorage.deploy(unlockTime);
+	const TokenStorage = await hre.ethers.getContractFactory("TokenStorage");
+	const tokenStorage = await TokenStorage.deploy();
 
 	await tokenStorage.deployed();
 

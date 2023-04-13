@@ -1,0 +1,5 @@
+1. The deposit function takes a token address and an amount as input, and transfers the token from the depositor to the contract using the transferFrom function.
+
+2. The withdraw function takes a token address and an amount. It checks that the slab has sufficient balance to cover the withdrawal. It then subtracts the balance and transfers the token to the depositor using the transfer function.
+
+3. The getSlab function takes a token address and returns the index of slab, or reverts if no slab found.

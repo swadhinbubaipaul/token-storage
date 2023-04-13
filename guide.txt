@@ -1,0 +1,9 @@
+Guide:
+1. Depositor first runs the approve function to give spending permission to TestToken contract
+2. Then depositor executes deposit function to deposit the tokens.
+3. After deposit, the depositor can check his slab number.
+4. When the depositor wants to withdraw the fund, he executes the withdraw function.
+
+Deployed contracts to mumbai testnet:
+1. TestToken: 0xc7Dc20f559325acab9eB63C2462dB1B8c47dD461
+2. TokenStorage: 0x76e628c9144c7852aBd4ba3A1560C300ad19a6CA
