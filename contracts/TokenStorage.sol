@@ -25,10 +25,8 @@ contract TokenStorage {
             deposited[msg.sender][token] + amount <= MAX_CAPACITY,
             "transfer exceeds capacity"
         );
-        require(
-            IERC20(token).transferFrom(msg.sender, address(this), amount),
-            "transfer failed"
-        );
+
+        IERC20(token).transferFrom(msg.sender, address(this), amount);
         deposited[msg.sender][token] += amount;
     }
 
@@ -37,7 +35,7 @@ contract TokenStorage {
         deposited[msg.sender][token] -= amount;
 
         // Transfer the token from this contract to the depositor
-        require(IERC20(token).transfer(msg.sender, amount), "transfer failed");
+        IERC20(token).transfer(msg.sender, amount);
     }
 
     function getSlab(address token) external view returns (uint256) {
